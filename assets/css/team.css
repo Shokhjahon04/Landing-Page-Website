@@ -1,0 +1,271 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;500;600;700&family=Nunito:wght@400;500;600;800&display=swap');
+
+
+/*=============== VARIABLES CSS ===============*/
+:root{
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    --body-font: 'DM Serif Display';
+    --body-font-2: 'Jost';
+    --white-color: #FFFFFF;
+    --body-color: #FFFFFF;
+    --container-color: #FFFFFF;
+    --text-color: #292F36;
+    --title-color: #292F36;
+    --description-color: #4D5053;
+    --primary-1: #CDA274;
+    --primary-2: #292F36;
+    --primary-3: #F4F0EC;
+
+
+    /*========== Fonts ==========*/
+    --big-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-400-weight: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+
+/* Responsive fonts */
+@media screen and (min-width: 968px) {
+    :root {
+      --big-font-size: 3.5rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+}
+
+/*=============== TEAM / HOME ===============*/
+/* Based on About/Home structure */
+.about-home{
+    margin: 0;
+    padding: 0;
+}
+
+.about-home__bg{
+    height: 330px;
+    background: url(../img/services-home-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.about-home__container{
+    background: white;
+    border-radius: 25px 25px 0px 0px;
+    padding: 25px 90px;
+    text-align: center;
+}
+
+.about-home__title{
+    margin-bottom: 0.3rem;
+}
+
+.about-home__description{
+    font-family: var(--body-font-2);
+    font-size: var(--normal-font-size);
+    color: var(--description-color);
+}
+
+/*=============== TEAM / CONTACT ===============*/
+/* Based on About/Contact structure */
+.about-contact{
+    background-color: var(--white-color);
+}
+
+.about-contact__container{
+    padding-bottom: 6.5rem;
+    row-gap: 1.5rem;
+}
+
+/* for img */
+.about-contact__data:first-child{
+    max-width: 100%;
+    height: auto;
+    background: url(../img/contact-img-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+.about-contact__data:nth-child(2){
+    max-width: 100%;
+    height: auto;
+    background: url(../img/contact-img-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+.about-contact__data:nth-child(3){
+    max-width: 100%;
+    height: auto;
+    background: url(../img/contact-imgg-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+.about-contact__data:nth-child(4){
+    max-width: 100%;
+    height: auto;
+    background: url(../img/contact-img-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+.about-contact__data:nth-child(5){
+    max-width: 100%;
+    height: auto;
+    background: url(../img/team-contact-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+.about-contact__data:nth-child(6){
+    max-width: 100%;
+    height: auto;
+    background: url(../img/team-contact-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+.about-contact__data:nth-child(7){
+    max-width: 100%;
+    height: auto;
+    background: url(../img/team-contact-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+.about-contact__data:last-child{
+    max-width: 100%;
+    height: auto;
+    background: url(../img/team-contact-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+/* for hover */
+.about-contact__hoverbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 3.5rem;
+    border-radius: 16px;
+    padding: 5.5rem 4rem;
+    cursor: pointer;
+
+    bottom: -100%;
+}
+
+.about-contact__subtitle{
+    font-family: var(--body-font);
+    font-size: var(--h2-font-size);
+    color: var(--primary-2);
+}
+
+.about-contact__description{
+    font-family: var(--body-font-2);
+    font-size: var(--normal-font-size);
+    color: var(--description-color);
+}
+
+.about-contact__social{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.about-contact__social-link{
+    color: var(--primary-2);
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.about-contact__social-link:hover{
+    transform: translateY(-4px);
+    color: var(--primary-1);
+}
+
+/* about/contact hover */
+.about-contact__data:hover .about-contact__hoverbox{
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+
+/* Breakpoints for this element */
+/* For medium devices */
+@media screen and (min-width: 600px){
+    .about-contact__container{
+        column-gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px){
+    .about-contact__container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1048px){
+    .about-contact__container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .about-contact__hoverbox{
+        padding: 2rem 3rem;
+        row-gap: 3rem;
+    }
+}

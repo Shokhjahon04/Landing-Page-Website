@@ -1,0 +1,139 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;500;600;700&family=Nunito:wght@400;500;600;800&display=swap');
+
+
+/*=============== VARIABLES CSS ===============*/
+:root{
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    --body-font: 'DM Serif Display';
+    --body-font-2: 'Jost';
+    --white-color: #FFFFFF;
+    --body-color: #FFFFFF;
+    --container-color: #FFFFFF;
+    --text-color: #292F36;
+    --title-color: #292F36;
+    --description-color: #4D5053;
+    --primary-1: #CDA274;
+    --primary-2: #292F36;
+    --primary-3: #F4F0EC;
+
+
+    /*========== Fonts ==========*/
+    --big-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-400-weight: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+
+/* Responsive fonts */
+@media screen and (min-width: 968px) {
+    :root {
+      --big-font-size: 3.5rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+}
+
+/*=============== BLOG / HOME ===============*/
+/* Based on About/Home structure */
+.about-home{
+    margin: 0;
+    padding: 0;
+}
+
+.about-home__bg{
+    height: 330px;
+    background: url(../img/services-home-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.about-home__container{
+    background: white;
+    border-radius: 25px 25px 0px 0px;
+    padding: 25px 90px;
+    text-align: center;
+}
+
+.about-home__title{
+    margin-bottom: 0.3rem;
+}
+
+.about-home__description{
+    font-family: var(--body-font-2);
+    font-size: var(--normal-font-size);
+    color: var(--description-color);
+}
+
+/*=============== BLOG / LATEST ===============*/
+.latest__container{
+    row-gap: 2.5rem;
+}
+
+.latest__data{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.latest__subtitle{
+    font-family: var(--body-font);
+    font-size: var(--h2-font-size);
+    margin-bottom: 0.5rem;
+}
+
+.latest__box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Breakpoints for this element */
+@media screen and (min-width: 650px){
+    .latest__container{
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .latest__container{
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 6rem;
+    }
+}
+
+@media screen and (min-width: 1048px){
+    .latest__container{
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10rem;
+    }
+}

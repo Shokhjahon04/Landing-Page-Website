@@ -1,0 +1,532 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;500;600;700&family=Nunito:wght@400;500;600;800&display=swap');
+
+
+/*=============== VARIABLES CSS ===============*/
+:root{
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    --body-font: 'DM Serif Display';
+    --body-font-2: 'Jost';
+    --white-color: #FFFFFF;
+    --body-color: #FFFFFF;
+    --container-color: #FFFFFF;
+    --text-color: #292F36;
+    --title-color: #292F36;
+    --description-color: #4D5053;
+    --primary-1: #CDA274;
+    --primary-2: #292F36;
+    --primary-3: #F4F0EC;
+
+
+    /*========== Fonts ==========*/
+    --big-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-400-weight: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+
+/* Responsive fonts */
+@media screen and (min-width: 968px) {
+    :root {
+      --big-font-size: 3.5rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+}
+
+/*=============== PROFESSIONAL / HOME ===============*/
+/* Based on About/Home structure */
+.about-home{
+    margin: 0;
+    padding: 0;
+}
+
+.about-home__bg{
+    height: 330px;
+    background: url(../img/services-home-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.about-home__container{
+    background: white;
+    border-radius: 25px 25px 0px 0px;
+    padding: 25px 90px;
+    text-align: center;
+}
+
+.about-home__title{
+    margin-bottom: 0.3rem;
+}
+
+.about-home__description{
+    font-family: var(--body-font-2);
+    font-size: var(--normal-font-size);
+    color: var(--description-color);
+}
+
+/*=============== PROFESSIONAL ===============*/
+.professional__container{
+    row-gap: 2.5rem;
+}
+
+.professional__data{
+    display: grid;
+    row-gap: 1rem;
+}
+
+.professional__title span{
+    font-family: var(--body-font-2);
+    font-size: var(--normal-font-size);
+    color: var(--description-color);
+}
+
+.professional__info{
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+}
+
+.professional__info-icon{
+    background-color: var(--primary-3);
+    padding: 8px;
+    color: var(--primary-1);
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.professional__info-icon:hover{
+    background-color: #f6ece1;
+    transition-duration: 0.3s;
+}
+
+/*=============== PROFESSIONAL / BIOGRAPHY ===============*/
+.biography__description{
+    margin-bottom: 1.5rem;
+}
+
+/*=============== PROFESSIONAL / SKILLS ===============*/
+.skills{
+    padding: 5.5rem 0 6.5rem;
+}
+.skills__container{
+    row-gap: 2.5rem;
+}
+
+.skills__data:first-child{
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.skills__data:last-child{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    
+}
+
+.skills__subtitle{
+    font-family: var(--body-font);
+    font-size: var(--h2-font-size);
+    color: var(--primary-2);
+}
+
+/* Range */
+/* Internal structure */
+.skills__data-range{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-weight: 400;
+    padding: .5rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+}
+
+.skills__icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-bottom: 0.2rem;
+    color: var(--primary-1);
+  }
+  
+.skills__names{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+  
+.skills__bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--primary-1);
+    height: .25rem;
+    border-radius: .5rem;
+    z-index: 10;
+}
+  
+.skills__html{
+    width: 65%;
+}
+  
+.skills__css{
+    width: 75%;
+}
+  
+.skills__js{
+    width: 95%;
+}
+
+/* Accordion */
+/* Internal structure */
+.questions__group{
+    display: grid;
+    row-gap: 1.5rem;
+  }
+  
+.questions__item{
+    border: 1px solid var(--primary-1);
+    border-radius: .5rem;
+}
+
+.questions__header{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: .75rem .5rem;
+    cursor: pointer;
+}
+  
+.questions__item-title{
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+}
+  
+.questions__icon{
+    background-color: var(--primary-3);
+    padding: .30rem;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+  
+.questions__description{
+    padding: 0 1.25rem 1rem 1rem;
+}
+  
+.questions__content{
+    overflow: hidden;
+    height: 0;
+}
+  
+.questions__item,
+.questions__header,
+.questions__item-title,
+.questions__icon,
+.questions__description,
+.questions__content{
+    transition: .3s;
+}
+  
+.questions__item:hover{
+    box-shadow: 0 2px 8px hsla(var(--hue), 4%, 15%, .15);
+}
+  
+/*Rotate icon, change color of titles and background*/
+.accordion-open .questions__header,
+.accordion-open .questions__content{
+    background-color: var(--primary-3);
+}
+  
+.accordion-open .questions__item-title,
+.accordion-open .questions__description,
+.accordion-open .questions__icon{
+    color: var(--primary-2);
+}
+.accordion-open .questions__icon{
+    transform: rotate(45deg);
+    background-color: var(--white-color);
+}
+
+/*=============== PROFESSIONAL / CONTACT ===============*/
+/* Based on about structure */
+.about-contact{
+    background-color: var(--primary-3);
+}
+
+.about-contact__container{
+    padding-bottom: 6.5rem;
+    row-gap: 1.5rem;
+}
+
+/* for img */
+.about-contact__data:first-child{
+    max-width: 100%;
+    height: auto;
+    background: url(../img/contact-img-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+.about-contact__data:nth-child(2){
+    max-width: 100%;
+    height: auto;
+    background: url(../img/contact-img-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+.about-contact__data:nth-child(3){
+    max-width: 100%;
+    height: auto;
+    background: url(../img/contact-img-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+.about-contact__data:last-child{
+    max-width: 100%;
+    height: auto;
+    background: url(../img/contact-img-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    overflow-y: hidden;
+}
+
+/* for hover */
+.about-contact__hoverbox{
+    position: relative;
+    width: 100%;
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 3.5rem;
+    border-radius: 16px;
+    padding: 5.5rem 4rem;
+
+    bottom: -100%;
+}
+
+.about-contact__subtitle{
+    font-family: var(--body-font);
+    font-size: var(--h2-font-size);
+    color: var(--primary-2);
+}
+
+.about-contact__description{
+    font-family: var(--body-font-2);
+    font-size: var(--normal-font-size);
+    color: var(--description-color);
+}
+
+.about-contact__social{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.about-contact__social-link{
+    color: var(--primary-2);
+    font-size: 1.3rem;
+    transition: 0.3s;
+}
+
+.about-contact__social-link:hover{
+    transform: translateY(-4px);
+    color: var(--primary-1);
+}
+
+/* about/contact hover */
+.about-contact__data:hover .about-contact__hoverbox{
+    bottom: 0;
+    transition-duration: 0.4s;
+}
+
+/*=============== PROFESSIONAL / FORM ===============*/
+/* Based on about structure */
+.about-form{
+    padding: 6.5rem 0 3.5rem;
+}
+
+.about-form__container{
+    row-gap: 1.5rem;
+}
+
+/* Form */
+.contact__inputs{
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+.contact__content{
+    position: relative;
+    height: 3rem;
+    border-bottom: 1px solid var(--primary-2);
+}
+  
+.contact__input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 0;
+    background: none;
+  
+    color: var(--primary-2);
+  
+    
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+  
+.contact__label{
+    position: absolute;
+    top: .75rem;
+    width: 100%;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    transition: .3s;
+}
+  
+.contact__area{
+    height: 7rem;
+}
+  
+.contact__area textarea{
+    resize: none;
+}
+  
+/*Input focus move up label*/
+.contact__input:focus + .contact__label{
+    top: -.75rem;
+    left: 0;
+    font-size: var(--smaller-font-size);
+    z-index: 10;
+}
+  
+/*Input focus sticky top label*/
+.contact__input:not(:placeholder-shown).contact__input:not(:focus) + .contact__label{
+    top: -.75rem;
+    font-size: var(--smaller-font-size);
+    z-index: 10;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+/* Completed in main css */
+
+/* For medium devices */
+@media screen and (min-width: 600px){
+    .about-contact__container{
+        column-gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .professional__container{
+        column-gap: 2.5rem;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 700px){
+    .skills__container{
+        column-gap: 3.5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px){
+    .skills__container{
+        column-gap: 4.5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .professional__container{
+        column-gap: 8rem;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-contact__container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact__form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact__inputs{
+        width: 700px;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1048px){
+    .professional__container{
+        column-gap: 12rem;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-contact__container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .about-contact__hoverbox{
+        padding: 2rem 3rem;
+        row-gap: 3rem;
+    }
+}

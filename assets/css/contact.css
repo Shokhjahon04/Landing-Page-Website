@@ -1,0 +1,245 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;500;600;700&family=Nunito:wght@400;500;600;800&display=swap');
+
+
+/*=============== VARIABLES CSS ===============*/
+:root{
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    --body-font: 'DM Serif Display';
+    --body-font-2: 'Jost';
+    --white-color: #FFFFFF;
+    --body-color: #FFFFFF;
+    --container-color: #FFFFFF;
+    --text-color: #292F36;
+    --title-color: #292F36;
+    --description-color: #4D5053;
+    --primary-1: #CDA274;
+    --primary-2: #292F36;
+    --primary-3: #F4F0EC;
+
+
+    /*========== Fonts ==========*/
+    --big-font-size: 2.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-400-weight: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+
+/* Responsive fonts */
+@media screen and (min-width: 968px) {
+    :root {
+      --big-font-size: 3.5rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+}
+
+/*=============== CONTACT / HOME ===============*/
+.about-home{
+    margin: 0;
+    padding: 0;
+}
+
+.about-home__bg{
+    height: 330px;
+    background: url(../img/about-home-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.about-home__container{
+    background: white;
+    border-radius: 25px 25px 0px 0px;
+    padding: 25px 90px;
+    text-align: center;
+}
+
+.about-home__title{
+    margin-bottom: 0.3rem;
+}
+
+.about-home__description{
+    font-family: var(--body-font-2);
+    font-size: var(--normal-font-size);
+    color: var(--description-color);
+}
+
+/*=============== CONTACT / INFO ===============*/
+.contact-infoo{
+    padding: 6.5rem 0 2.5rem;
+}
+
+.contact-infoo__container{
+    row-gap: 2.5rem;
+}
+
+.contact-infoo__data{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    justify-content: center;
+    background-color: var(--primary-3);
+    padding: 2rem;
+    border-radius: 30px;
+}
+
+/* Based on professional structure */
+.professional__info{
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+}
+
+.professional__info-icon{
+    background-color: var(--white-color)    ;
+    padding: 8px;
+    color: var(--primary-1);
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.professional__info-icon:hover{
+    background-color: #f6ece1;
+    transition-duration: 0.3s;
+}
+
+/* Based on about structure */
+.about-form{
+    padding: 6.5rem 0 3.5rem;
+}
+
+.about-form__container{
+    row-gap: 1.5rem;
+}
+
+/* Form */
+.contact__inputs{
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+.contact__content{
+    position: relative;
+    height: 3rem;
+    border-bottom: 1px solid var(--primary-2);
+}
+  
+.contact__input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 0;
+    background: none;
+  
+    color: var(--primary-2);
+  
+    
+    border: none;
+    outline: none;
+    z-index: 1;
+}
+  
+.contact__label{
+    position: absolute;
+    top: .75rem;
+    width: 100%;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    transition: .3s;
+}
+  
+.contact__area{
+    height: 7rem;
+}
+  
+.contact__area textarea{
+    resize: none;
+}
+  
+/*Input focus move up label*/
+.contact__input:focus + .contact__label{
+    top: -.75rem;
+    left: 0;
+    font-size: var(--smaller-font-size);
+    z-index: 10;
+}
+  
+/*Input focus sticky top label*/
+.contact__input:not(:placeholder-shown).contact__input:not(:focus) + .contact__label{
+    top: -.75rem;
+    font-size: var(--smaller-font-size);
+    z-index: 10;
+}
+
+/*=============== CONTACT / MAP ===============*/
+.contact-map{
+    padding: 4rem 0 5.5rem;
+}
+
+.contact-map__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-map__content{
+    border-radius: 30px;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+/* Completed in main css */
+
+/* For medium devices */
+@media screen and (min-width: 700px){
+    .contact-infoo__container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2.5rem;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 900px){
+    .contact-infoo__container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4.5rem;
+    }
+}
+
+@media screen and (min-width: 1048px){
+    .contact-infoo__container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 8rem;
+    }
+}
